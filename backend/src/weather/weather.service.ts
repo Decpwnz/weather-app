@@ -39,6 +39,7 @@ export class WeatherService {
           windDirection: currentWeather.windDirection,
           cloudCover: currentWeather.cloudCover,
           forecastTimeUtc: currentWeather.forecastTimeUtc,
+          humidity: currentWeather.relativeHumidity,
         },
         forecast: fiveDayForecast.map((forecast) => ({
           forecastTimeUtc: forecast.forecastTimeUtc,
@@ -46,6 +47,7 @@ export class WeatherService {
           windSpeed: forecast.windSpeed,
           windDirection: forecast.windDirection,
           cloudCover: forecast.cloudCover,
+          humidity: forecast.relativeHumidity,
         })),
       };
     } catch (error) {

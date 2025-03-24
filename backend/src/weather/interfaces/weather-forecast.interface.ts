@@ -4,6 +4,7 @@ interface ForecastTimestamp {
   windSpeed: number;
   windDirection: number;
   cloudCover: number;
+  relativeHumidity: number;
 }
 
 export interface WeatherForecastResponse {
