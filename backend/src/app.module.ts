@@ -4,6 +4,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import configuration from './config/configuration';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { WeatherModule } from './weather/weather.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { AppService } from './app.service';
       }),
       inject: [ConfigService],
     }),
+    WeatherModule,
   ],
   controllers: [AppController],
   providers: [AppService],
