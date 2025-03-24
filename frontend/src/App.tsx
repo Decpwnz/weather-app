@@ -4,7 +4,7 @@ import { Header } from './components/Layout/Header'
 import { CitySearch } from './components/Weather/CitySearch'
 import { MostViewedCities } from './components/Weather/MostViewedCities'
 import { CurrentWeather } from './components/Weather/CurrentWeather'
-
+import { ForecastWeather } from './components/Weather/ForecastWeather'
 function App() {
   return (
     <>
@@ -13,6 +13,7 @@ function App() {
         <CitySearch />
         <MostViewedCities />
         <CurrentWeather />
+        <ForecastWeather />
       </Container>
     </>
   )
