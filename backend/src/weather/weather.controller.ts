@@ -1,4 +1,11 @@
-import { Controller, Get, Query, ValidationPipe } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Query,
+  ValidationPipe,
+  Post,
+  Body,
+} from '@nestjs/common';
 import { WeatherService } from './weather.service';
 import { GetWeatherDto } from './dto/get-weather.dto';
 
@@ -9,5 +16,12 @@ export class WeatherController {
   @Get()
   getWeather(@Query(ValidationPipe) query: GetWeatherDto) {
     return this.weatherService.getWeather(query);
+  }
+
+  @Post('log-selection')
+  logCitySelection(@Body() data: { cityName: string }) {
+    const timestamp = new Date().toISOString();
+    console.log(`City selected: ${data.cityName} at ${timestamp}`);
+    return { message: 'City selection logged successfully' };
   }
 }
