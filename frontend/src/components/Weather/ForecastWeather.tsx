@@ -2,6 +2,7 @@ import { useAppSelector } from '../../hooks/useAppDispatch'
 import { Card, CardContent, Typography, Box, CircularProgress, Alert, Stack } from '@mui/material'
 import { ThermostatAuto, Air, Cloud, Schedule } from '@mui/icons-material'
 import type { ForecastWeather } from '../../types'
+import './../../styles/main.scss'
 
 export function ForecastWeather() {
   const { currentWeather, loading, error } = useAppSelector((state) => state.weather)
@@ -28,33 +29,24 @@ export function ForecastWeather() {
 
   return (
     <Box sx={{ width: '100%', maxWidth: 1200, mx: 'auto', mt: 3, mb: 3 }}>
-      <Typography variant="h6" gutterBottom sx={{ px: 2 }}>
+      <Typography variant="h6" gutterBottom className="weather-card__title" sx={{ px: 2 }}>
         5-Day Forecast for {currentWeather.cityName}
       </Typography>
 
       <Box
+        className="forecast-scroll"
         sx={{
           display: 'flex',
           overflowX: 'auto',
           gap: 2,
           px: 2,
           pb: 1,
-          '::-webkit-scrollbar': {
-            height: 8,
-          },
-          '::-webkit-scrollbar-track': {
-            backgroundColor: 'rgba(0,0,0,0.1)',
-            borderRadius: 4,
-          },
-          '::-webkit-scrollbar-thumb': {
-            backgroundColor: 'rgba(0,0,0,0.2)',
-            borderRadius: 4,
-          },
         }}
       >
         {currentWeather.forecast.map((forecast: ForecastWeather, index: number) => (
           <Card
             key={index}
+            className="weather-card"
             sx={{
               minWidth: 250,
               flex: '0 0 auto',
@@ -70,24 +62,24 @@ export function ForecastWeather() {
                   })}
                 </Typography>
 
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                <Box className="weather-card__info-row">
                   <ThermostatAuto />
                   <Typography>{forecast.temperature}°C</Typography>
                 </Box>
 
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                <Box className="weather-card__info-row">
                   <Air />
                   <Typography>
                     {forecast.windSpeed} m/s {forecast.windDirection}°
                   </Typography>
                 </Box>
 
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                <Box className="weather-card__info-row">
                   <Cloud />
                   <Typography>{forecast.cloudCover}%</Typography>
                 </Box>
 
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                <Box className="weather-card__info-row">
                   <Schedule />
                   <Typography>
                     {new Date(forecast.forecastTimeUtc).toLocaleTimeString(undefined, {
