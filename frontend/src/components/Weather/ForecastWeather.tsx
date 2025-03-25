@@ -1,6 +1,6 @@
 import { useAppSelector } from '../../hooks/useAppDispatch'
 import { Card, CardContent, Typography, Box, CircularProgress, Alert, Stack } from '@mui/material'
-import { ThermostatAuto, Air, Cloud, Schedule } from '@mui/icons-material'
+import { ThermostatAuto, Air, Cloud, Schedule, WaterDrop } from '@mui/icons-material'
 import type { ForecastWeather } from '../../types'
 import './../../styles/main.scss'
 
@@ -72,6 +72,11 @@ export function ForecastWeather() {
                   <Typography>
                     {forecast.windSpeed} m/s {forecast.windDirection}°
                   </Typography>
+                </Box>
+
+                <Box className="weather-card__info-row">
+                  <WaterDrop />
+                  <Typography>{forecast.humidity}%</Typography>
                 </Box>
 
                 <Box className="weather-card__info-row">

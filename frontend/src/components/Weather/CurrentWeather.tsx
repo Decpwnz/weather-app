@@ -35,7 +35,7 @@ export function CurrentWeather() {
     return null
   }
 
-  const { temperature, windSpeed, windDirection, cloudCover, forecastTimeUtc, humidity } =
+  const { temperature, windSpeed, windDirection, humidity, cloudCover, forecastTimeUtc } =
     currentWeather.current
 
   return (

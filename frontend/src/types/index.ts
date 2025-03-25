@@ -10,4 +10,5 @@ export interface ForecastWeather {
   windSpeed: number
   windDirection: number
   cloudCover: number
+  humidity: number
 }

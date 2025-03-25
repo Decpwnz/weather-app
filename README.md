@@ -4,7 +4,7 @@ A modern weather application that provides current weather information and 5-day
 
 ## Features
 
-- Current weather display with temperature, wind speed, cloud cover, and time
+- Current weather display with temperature, wind speed, humidity, cloud cover, and time
 - 5-day weather forecast
 - City search functionality with autocomplete
 - Tracks and displays 3 most viewed cities using localStorage
