@@ -73,4 +73,17 @@ export class WeatherService {
       `City selected: ${cityName} at ${new Date().toISOString()}`,
     );
   }
+
+  async getCitySelections() {
+    return this.citySelectionModel.find().sort({ timestamp: -1 }).exec();
+  }
+
+  async getCitySelectionsCount() {
+    const selections = await this.citySelectionModel.find().exec();
+    const counts: Record<string, number> = {};
+    selections.forEach((selection) => {
+      counts[selection.cityName] = (counts[selection.cityName] || 0) + 1;
+    });
+    return counts;
+  }
 }

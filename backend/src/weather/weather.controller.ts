@@ -25,4 +25,14 @@ export class WeatherController {
     await this.weatherService.logCitySelection(data.cityName);
     return { message: 'City selection logged successfully' };
   }
+
+  @Get('selections')
+  async getCitySelections() {
+    return this.weatherService.getCitySelections();
+  }
+
+  @Get('selections/count')
+  async getCitySelectionsCount() {
+    return this.weatherService.getCitySelectionsCount();
+  }
 }
