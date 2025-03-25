@@ -19,9 +19,10 @@ export class WeatherController {
   }
 
   @Post('log-selection')
-  logCitySelection(@Body() data: { cityName: string }) {
+  async logCitySelection(@Body() data: { cityName: string }) {
     const timestamp = new Date().toISOString();
     console.log(`City selected: ${data.cityName} at ${timestamp}`);
+    await this.weatherService.logCitySelection(data.cityName);
     return { message: 'City selection logged successfully' };
   }
 }
