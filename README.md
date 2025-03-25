@@ -1,5 +1,3 @@
-# weather-app
-
 # Weather App
 
 A modern weather application that provides current weather information and 5-day forecasts for cities in Lithuania.
