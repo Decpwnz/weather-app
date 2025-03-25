@@ -1,13 +1,8 @@
+import { CityViews } from '../types'
 import { useLocalStorage } from './useLocalStorage'
 
-interface CityView {
-  name: string
-  views: number
-  lastViewed: number
-}
-
 export function useMostViewedCities() {
-  const [cityViews, setCityViews] = useLocalStorage<CityView[]>('cityViews', [])
+  const [cityViews, setCityViews] = useLocalStorage<CityViews[]>('cityViews', [])
 
   const addCityView = (cityName: string) => {
     setCityViews((prev) => {

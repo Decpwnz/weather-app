@@ -35,4 +35,9 @@ export class WeatherController {
   async getCitySelectionsCount() {
     return this.weatherService.getCitySelectionsCount();
   }
+
+  @Get('cities')
+  async getCities() {
+    return this.weatherService.getCities();
+  }
 }
