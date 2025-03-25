@@ -73,3 +73,17 @@ A modern weather application that provides current weather information and 5-day
    ```
 
 5. Open your browser and navigate to `http://localhost:5173` to access the application.
+
+## Testing
+
+The project includes comprehensive test suites for both backend and frontend:
+
+```bash
+# Backend tests
+cd backend
+npm run test
+
+# Frontend tests
+cd frontend
+npm run test
+```
