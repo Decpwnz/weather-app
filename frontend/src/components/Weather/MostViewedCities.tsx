@@ -17,7 +17,7 @@ export function MostViewedCities() {
 
   return (
     <Box sx={{ width: '100%', maxWidth: 400, mx: 'auto', mt: 2 }}>
-      <Typography variant="subtitle1" gutterBottom>
+      <Typography variant="h5" gutterBottom color="primary" textAlign="center">
         Most Viewed Cities
       </Typography>
       <Stack direction="row" spacing={1} justifyContent="center">
