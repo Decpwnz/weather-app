@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios'
 import { WeatherState } from '../../types'
+import { API_URL } from '../../config/config'
 
 const initialState: WeatherState = {
   currentWeather: null,
@@ -10,12 +11,12 @@ const initialState: WeatherState = {
 }
 
 export const fetchWeather = createAsyncThunk('weather/fetchWeather', async (cityName: string) => {
-  const response = await axios.get(`${import.meta.env.VITE_API_URL}/weather?cityName=${cityName}`)
+  const response = await axios.get(`${API_URL}/weather?cityName=${cityName}`)
   return response.data
 })
 
 export const fetchCities = createAsyncThunk('weather/fetchCities', async () => {
-  const response = await axios.get(`${import.meta.env.VITE_API_URL}/weather/cities`)
+  const response = await axios.get(`${API_URL}/weather/cities`)
   return response.data
 })
 

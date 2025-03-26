@@ -1,6 +1,21 @@
 # Weather App
 
-A modern weather application that provides current weather information and 5-day forecasts for cities in Lithuania.
+A modern weather application that provides current weather information and 5-day forecasts for cities in Lithuania and around this region.
+
+## Live Demo
+
+The application is currently running on AWS:
+
+- Frontend: [http://weather-app-frontend-alb-1688729764.eu-north-1.elb.amazonaws.com//](http://weather-app-frontend-alb-1688729764.eu-north-1.elb.amazonaws.com//)
+- Backend: [http://weather-app-backend-alb-1147937252.eu-north-1.elb.amazonaws.com/](http://weather-app-backend-alb-1147937252.eu-north-1.elb.amazonaws.com/)
+
+## Project Structure
+
+```
+weather-app/
+├── frontend/     # React + TypeScript frontend application
+└── backend/      # NestJS backend application
+```
 
 ## Features
 

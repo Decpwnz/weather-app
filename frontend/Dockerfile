@@ -3,15 +3,14 @@ FROM node:18-alpine AS builder
 
 WORKDIR /app
 
+# Set environment variables
+ARG VITE_API_URL
+ENV VITE_API_URL=$VITE_API_URL
+
 COPY package*.json ./
 RUN npm install
 
 COPY . .
-
-# Add this line to set the API URL during build
-ARG VITE_API_URL=http://localhost:3000
-ENV VITE_API_URL=${VITE_API_URL}
-
 RUN npm run build
 
 # Production stage

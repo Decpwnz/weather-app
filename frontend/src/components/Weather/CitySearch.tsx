@@ -5,6 +5,7 @@ import { useMostViewedCities } from '../../hooks/useMostViewedCities'
 import axios from 'axios'
 import { City } from '../../types'
 import { useCities } from '../../hooks/useCities'
+import { API_URL } from '../../config/config'
 
 export function CitySearch() {
   const dispatch = useAppDispatch()
@@ -21,7 +22,7 @@ export function CitySearch() {
 
   const logCitySelection = async (cityName: string) => {
     try {
-      await axios.post(`${import.meta.env.VITE_API_URL}/weather/log-selection`, {
+      await axios.post(`${API_URL}/weather/log-selection`, {
         cityName,
       })
     } catch (error) {
