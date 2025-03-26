@@ -1,0 +1,27 @@
+# Dependencies
+node_modules
+npm-debug.log
+
+# Build output
+dist
+
+# Environment files
+.env*
+
+# Git files
+.git
+.gitignore
+
+# IDE files
+.idea
+.vscode
+
+# Test files
+coverage
+**/*.test.tsx
+**/*.test.ts
+
+# Other
+README.md
+Dockerfile
+.dockerignore 
