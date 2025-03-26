@@ -6,9 +6,9 @@ A modern weather application that provides current weather information and 5-day
 
 The application is currently running on AWS:
 
-- Frontend: [http://weather-app-frontend-alb-1688729764.eu-north-1.elb.amazonaws.com//](http://weather-app-frontend-alb-1688729764.eu-north-1.elb.amazonaws.com/)
+- Frontend: [http://weather-app-frontend-alb-1688729764.eu-north-1.elb.amazonaws.com/](http://weather-app-frontend-alb-1688729764.eu-north-1.elb.amazonaws.com/)
 - Backend: [http://weather-app-backend-alb-1147937252.eu-north-1.elb.amazonaws.com/](http://weather-app-backend-alb-1147937252.eu-north-1.elb.amazonaws.com/)
-- MongoDB Connection: [http://weather-app-backend-alb-1147937252.eu-north-1.elb.amazonaws.com/health](http://weather-app-backend-alb-1147937252.eu-north-1.elb.amazonaws.com/health)
+- Saved actions into MongoDB: [http://weather-app-backend-alb-1147937252.eu-north-1.elb.amazonaws.com/weather/selections](http://weather-app-backend-alb-1147937252.eu-north-1.elb.amazonaws.com/weather/selections)
 
 ## Project Structure
 
