@@ -37,7 +37,6 @@ export class WeatherService {
 
       const forecasts = data.forecastTimestamps;
       const currentWeather = forecasts[0];
-      const fiveDayForecast = forecasts.slice(0, 40);
 
       return {
         cityName,
@@ -49,7 +48,7 @@ export class WeatherService {
           forecastTimeUtc: currentWeather.forecastTimeUtc,
           humidity: currentWeather.relativeHumidity,
         },
-        forecast: fiveDayForecast.map((forecast) => ({
+        forecast: forecasts.map((forecast) => ({
           forecastTimeUtc: forecast.forecastTimeUtc,
           temperature: forecast.airTemperature,
           windSpeed: forecast.windSpeed,
