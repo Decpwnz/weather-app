@@ -113,7 +113,13 @@ export function ForecastWeather() {
       <Box className="forecast-scroll">
         {groupedForecasts[selectedDay]?.forecasts.map(
           (forecast: ForecastWeather, index: number) => (
-            <Card key={index} className="weather-card">
+            <Card
+              key={index}
+              className="weather-card"
+              sx={{
+                borderRadius: '16px',
+              }}
+            >
               <CardContent>
                 <Stack spacing={2}>
                   <Typography variant="subtitle1" className="weather-card__time">

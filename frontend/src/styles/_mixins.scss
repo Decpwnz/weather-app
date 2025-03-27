@@ -1,0 +1,22 @@
+@mixin card-hover {
+  transition: transform $transition-fast;
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin container-shadow {
+  box-shadow: $container-shadow;
+}
+
+@mixin glass-effect {
+  background-color: rgba($white, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: $border-radius-md;
+}

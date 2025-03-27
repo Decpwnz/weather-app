@@ -39,7 +39,12 @@ export function CurrentWeather() {
     currentWeather.current
 
   return (
-    <Card className="weather-card" sx={{ width: '100%', maxWidth: 400, mx: 'auto', mt: 2 }}>
+    <Card
+      className="weather-card__current-weather"
+      sx={{
+        borderRadius: '16px',
+      }}
+    >
       <CardContent className="weather-card__content">
         <Typography variant="h6" gutterBottom className="weather-card__title">
           Current Weather in {currentWeather.cityName}
