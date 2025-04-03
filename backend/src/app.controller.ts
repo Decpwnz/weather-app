@@ -19,7 +19,7 @@ export class AppController {
   getHealth() {
     return {
       status: 'ok',
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toLocaleString('lt-LT'),
       database: {
         state:
           this.connection.readyState === ConnectionStates.connected

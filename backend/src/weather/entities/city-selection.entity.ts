@@ -5,9 +5,6 @@ import { Document } from 'mongoose';
 export class CitySelection extends Document {
   @Prop({ required: true })
   cityName: string;
-
-  @Prop({ required: true })
-  timestamp: Date;
 }
 
 export const CitySelectionSchema = SchemaFactory.createForClass(CitySelection);

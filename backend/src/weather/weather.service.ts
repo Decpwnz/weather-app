@@ -26,10 +26,6 @@ export class WeatherService {
   async getWeather(getWeatherDto: GetWeatherDto) {
     const { cityName } = getWeatherDto;
 
-    this.logger.log(
-      `Weather requested for city: ${cityName} at ${new Date().toISOString()}`,
-    );
-
     try {
       const { data } = await axios.get<WeatherForecastResponse>(
         `${this.apiUrl}/places/${cityName}/forecasts/long-term`,
@@ -66,12 +62,9 @@ export class WeatherService {
   async logCitySelection(cityName: string) {
     const citySelection = new this.citySelectionModel({
       cityName,
-      timestamp: new Date(),
     });
     await citySelection.save();
-    this.logger.log(
-      `City selected: ${cityName} at ${new Date().toISOString()}`,
-    );
+    console.log(`City selected: ${cityName} at ${new Date().toLocaleString()}`);
   }
 
   async getCitySelections() {
